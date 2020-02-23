@@ -13,4 +13,17 @@ aside.pcoded-slider.ng-sidebar {
   &.hide {
     display: none;
   }
+} 
+
+.show-notification {
+  background: linear-gradient(to top, #ccffff 0%,white  100%) !important;
+}
+
+.nav-left li.mega-menu-top { 
+ &:hover {
+  //border-left: 1px solid rgba(0, 0, 0, 0.125);
+  //border-right: 1px solid rgba(0, 0, 0, 0.125);
+  background: linear-gradient(to bottom, #ccffff  0%,white  100%);
+  //font-weight:bolder;
+ }
 }

@@ -32,10 +32,10 @@
 
 
 
-            <ul class="nav-left">
+            <ul class="nav-left" >
               <li>
                 <div class="sidebar_toggle"><a href="javascript:;" (click)="toggleOpened()"><i
-                      class="ti-menu f-18"></i></a></div>
+                      class="ti-menu f-18 text-warning"></i></a></div>
               </li>
               <li>
                 <a href="javascript:;" appToggleFullscreen>
@@ -43,7 +43,7 @@
                 </a>
               </li>
               <li class="mega-menu-top">
-                <a href="javascript:;">
+                <a>
                   Search
                   <i class="ti-search"></i>
                 </a>
@@ -139,14 +139,14 @@
                   </li>-->
                   <li class="row">
                     <div class="col-sm-12">
-                      <h6 class="mega-menu-title">Search Criteria</h6>
+                      <h6 class="mega-menu-title text-primary">Search Criteria</h6>
                       <div class="mega-menu-contact">
                         <div class="form-group row">
                           <div class="col-sm-6 ">
                             <div class="form-group row pl-4">
                               <div class="form-check pb-3 pt-1">
-                                <label class="form-check-label">
-                                  <input type="radio" class="form-check-input" name="optradio">Month
+                                <label class="form-check-label text-primary">
+                                  <input type="radio" class="form-check-input mt-0" name="optradio">Month
                                 </label>
                               </div>
                               <div class="col-sm-10">
@@ -160,8 +160,8 @@
                             </div>
                             <div class="form-group row pl-4">
                               <div class="form-check pb-3 pt-1">
-                                <label class="form-check-label">
-                                  <input type="radio" class="form-check-input" name="optradio">Week
+                                <label class="form-check-label text-primary">
+                                  <input type="radio" class="form-check-input mt-0" name="optradio">Week
                                 </label>
                               </div>
                               <div class="col-sm-10 pl-4">
@@ -176,7 +176,7 @@
                           </div>
                           <div class="col-sm-4">
                             <div class="form-group row">
-                              <label class="col-sm-2 col-form-label">Year: </label>
+                              <label class="col-sm-2 col-form-label text-primary">Year: </label>
                               <div class="col-sm-10">
                                 <select name="Year" id="ddlYear" class="form-control">
                                   <option value="2020">2020</option>
@@ -186,7 +186,7 @@
                               </div>
                             </div>
                             <div class="form-group row">
-                              <label class="col-sm-2 col-form-label">Store: </label>
+                              <label class="col-sm-2 col-form-label text-primary">Store: </label>
                               <div class="col-sm-10">
                                 <select id="ddlStore" name="Store" class="form-control">
                                   <option value="S1">All</option>
@@ -201,13 +201,13 @@
                           <div class="col-sm-2">
                             <div class="form-group row">
                               <div class="form-check">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value=""> YTD
+                                <label class="form-check-label text-primary">
+                                  <input type="checkbox" class="form-check-input mt-0" value=""> YTD
                                 </label>
                               </div>
                             </div>
                             <div class="form-group row pt-3">
-                              <button type="submit" class="btn btn-primary btn-sm">
+                              <button type="submit" class="btn btn-success btn-sm">
                                 search</button>
                             </div>
                           </div>
@@ -219,20 +219,11 @@
                 </ul>
               </li>
               <li>
-                <table>
-                  <tr>
-                    <td style="font-weight:bold">Month:</td>
-                    <td> January &nbsp;</td>
-                    <td></td>
-                    <td style="font-weight:bold">Year:</td>
-                    <td> 2020 &nbsp;</td>
-                    <td></td>
-                    <td style="font-weight:bold">Store:</td>
-                    <td> All &nbsp;</td>
-                    <!--td style="font-weight:bold">YTD:</td><td> No</td>-->
-                  </tr>
-                </table>
-
+                <ul>
+                  <li><span class="h8 text-primary font-weight-bold">Month <i class="ti-angle-double-right small"></i> </span> <span class="h8 text-primary"> January</span></li>
+                  <li><span class="h8 text-primary font-weight-bold">Year <i class="ti-angle-double-right small"></i></span> <span class="h8 text-primary"> 2020</span></li>
+                  <li><span class="h8 text-primary font-weight-bold">Store <i class="ti-angle-double-right small"></i></span> <span class="h8 text-primary"> All</span></li>
+                </ul>
               </li>
             </ul>
 
