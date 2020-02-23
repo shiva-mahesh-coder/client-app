@@ -1,0 +1,366 @@
+<div class="row">
+  <!-- Sales table Start -->
+  <div class="col-md-8 col-lg-8">
+    <div class="card">
+      <div class="card-body">
+        <h5>Sales Detail</h5>
+      </div>
+      <!--<app-card [cardClass]="'counter-card-2'" [blockClass]="'card-body-big'">-->
+      <div class="row">
+
+        <div class="col-3 text-center">
+          <div class="counter-card-text">
+            <h4>$200,000</h4>
+            <p>Revenue</p>
+            <a id="aTotSales" [routerLink]="['/topsalesreport']">
+              <p>View stores</p>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="col-2 text-left">
+          <div class="counter-card-text">
+            <h4>670</h4>
+            <p>Quantity Sold</p>
+          </div>
+        </div>
+
+        <div class="col-2 text-center">
+          <div class="counter-card-text">
+            <h4>-$10,000</h4>
+            <p>Discount Given</p>
+          </div>
+        </div>
+
+        <div class="col-2 text-right">
+          <div class="counter-card-text">
+            <h4>4.3%</h4>
+            <p>Return Rate</p>
+          </div>
+        </div>
+
+        <div class="col-3 text-center">
+          <div class="counter-card-text">
+            <h4>62.25%</h4>
+            <p>GP%</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--</app-card>-->
+    </div>
+  </div>
+  <!-- Sales table End -->
+  <!-- Transaction table Start -->
+  <div class="col-md-8 col-lg-4">
+    <div class="card" >
+      <div class="card-body">
+        <h5>Sales Transactions</h5>
+      </div>
+      <!--<app-card [cardClass]="'counter-card-2'" [blockClass]="'card-body-big'">-->
+      <div class="row" style="height: 110px;">
+        <div class="col-4 text-center">
+          <div class="counter-card-text">
+            <h4>243</h4>
+            <p>No of Transaction</p>
+            <!--<p> ax </p>-->
+          </div>
+        </div>
+
+
+        <div class="col-4 text-center">
+          <div class="counter-card-text">
+            <h4>$243</h4>
+            <p>ATV</p>
+          </div>
+        </div>
+
+        <div class="col-4 text-center">
+          <div class="counter-card-text">
+            <h4>2.08</h4>
+            <p>UPT</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!--</app-card>-->
+
+
+
+
+    </div>
+  </div>
+  <!-- Transaction table End -->
+  <!-- Top 5 stores table Start -->
+  <div class="col-md-12 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5>Store Ranking</h5>
+      </div>
+      <div class="card-body product-table p-t-35" style="height:300px;overflow-y:auto">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr class="text-uppercase">
+                <th>Store</th>
+                <th>Rank</th>
+                <th>Sales ($)</th>
+                <th>GP %</th>
+
+                <!--<th>Actions</th>-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>101-ION Orchard</td>
+
+                <td>1</td>
+                <td>$55000</td>
+                <td>27.5%</td>
+
+                <!--<td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/topsalesreport']">View</button></td>-->
+              </tr>
+              <tr>
+                <td>102-Suntec City</td>
+
+                <td>2</td>
+                <td>$50000</td>
+                <td>25.0%</td>
+
+                <!--<td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/topsalesreport']">View</button></td>-->
+              </tr>
+              <tr>
+                <td>103- Funan City</td>
+
+                <td>3</td>
+                <td>$40000</td>
+                <td>20.0%</td>
+
+                <!--<td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/topsalesreport']">View</button></td>-->
+              </tr>
+              <tr>
+                <td>104-Bugis Junction</td>
+                <td>4</td>
+                <td>$30000</td>
+                <td>15%</td>
+
+                <!--<td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/topsalesreport']">View</button></td>-->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Top 5 stores table End -->
+  <!-- Top 10 Products table Start -->
+  <div class="col-md-12 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5>TOP 10 Selling Products</h5>
+      </div>
+      <div class="card-body product-table p-t-35" style="height:300px;overflow-y:auto">
+
+        <!---->
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr class="text-uppercase">
+                <th>Image</th>
+                <th>Store</th>
+                <th>Rank</th>
+                <th>Sales</th>
+                <th>Qty</th>
+                <th>GP%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td>
+                  <a href="javascript:;" [routerLink]="['/itemdetails']"><img class="img-responsive"
+                      src="assets/images/Shoe1.jpg" width="30" height="25" alt="chat-user"></a>
+                </td>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">AB1001</td>
+
+                <td>1</td>
+                <td>$18000</td>
+                <td>200</td>
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productreport']">View</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript:;" [routerLink]="['/itemdetails']"><img class="img-responsive"
+                      src="assets/images/prod1.jpg" width="30" height="25" alt="chat-user"></a>
+                </td>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">BB1234</td>
+                <td>2</td>
+                <td>$12000</td>
+                <td>180</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productreport']">View</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript:;" [routerLink]="['/itemdetails']"><img class="img-responsive"
+                      src="assets/images/prod2.jpg" width="30" height="25" alt="chat-user"></a>
+                </td>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">AB3209</td>
+
+                <td>3</td>
+                <td>$8000</td>
+                <td>100</td>
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productreport']">View</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript:;" [routerLink]="['/itemdetails']"><img class="img-responsive"
+                      src="assets/images/prod3.jpg" width="30" height="25" alt="chat-user"></a>
+                </td>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">BB9876</td>
+                <td>4</td>
+                <td>$5000</td>
+                <td>89</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productreport']">View</button></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Top 10 Products table End -->
+  <!-- Product Category table Start -->
+  <div class="col-md-12 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5>Product Category</h5>
+      </div>
+      <div class="card-body product-table p-t-35" style="height:300px;overflow-x:auto">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr class="text-uppercase">
+                <th>Level1</th>
+                <th>Sales</th>
+                <th>Qty</th>
+                <th>GP%</th>
+
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td [routerLink]="['/productcategory']" style="cursor:pointer;color:blue">Bag</td>
+
+                <td>18000.00</td>
+                <td>540</td>
+                <td>62.25</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productcategory']">View</button></td>
+              </tr>
+              <tr>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">Shoes</td>
+                <td>120000.00</td>
+                <td>400</td>
+                <td>62.25</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productcategory']">View</button></td>
+              </tr>
+              <tr>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">Acc</td>
+                <td>8000.00</td>
+                <td>370</td>
+                <td>60</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productcategory']">View</button></td>
+              </tr>
+              <tr>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">Leather</td>
+                <td>6000.00</td>
+                <td>360</td>
+                <td>60</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productcategory']">View</button></td>
+              </tr>
+              <tr>
+                <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">Others</td>
+                <td>4800.00</td>
+                <td>298</td>
+                <td>60</td>
+
+                <td><button type="button" class="btn btn-success btn-round btn-outline-success"
+                    [routerLink]="['/productcategory']">View</button></td>
+              </tr>
+
+
+              <!--<tr>
+        <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">6. Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+
+        <td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/productreport']">View</button></td>
+      </tr>
+      <tr>
+        <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">7. Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+
+        <td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/productreport']">View</button></td>
+      </tr>
+      <tr>
+        <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">8. Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+
+        <td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/productreport']">View</button></td>
+      </tr>
+      <tr>
+        <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">9. Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+
+        <td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/productreport']">View</button></td>
+      </tr>
+      <tr>
+        <td [routerLink]="['/productreport']" style="cursor:pointer;color:blue">10. Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+        <td>Awesome T-shirt</td>
+
+        <td><button type="button" class="btn btn-success btn-round btn-outline-success" [routerLink]="['/productreport']">View</button></td>
+      </tr>-->
+
+
+            </tbody>
+          </table>
+          <a id="aTotSales" [routerLink]="['/productsubcategory']">
+            <p>View sub-category</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Product Category table End -->
+
+
+</div>
