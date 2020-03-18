@@ -32,12 +32,12 @@
 
 
 
-            <ul class="nav-left" >
-              <li>
+            <ul class="nav-left">
+              <li class="d-none d-lg-block">
                 <div class="sidebar_toggle"><a href="javascript:;" (click)="toggleOpened()"><i
                       class="ti-menu f-18 text-warning"></i></a></div>
               </li>
-              <li>
+              <li class="d-none d-lg-block">
                 <a href="javascript:;" appToggleFullscreen>
                   <i class="ti-fullscreen"></i>
                 </a>
@@ -150,11 +150,8 @@
                                 </label>
                               </div>
                               <div class="col-sm-10">
-                                <select id="ddlMonth" class="form-control" checked>
-                                  <option value="Jan">January</option>
-                                  <option value="Feb">Febrary</option>
-                                  <option value="Mar">March</option>
-                                  <option value="Apr">April</option>
+                                <select id="ddlMonth" [(ngModel)]="monthSelected" (ngModelChange)="toNumber()" class="form-control" checked>
+                                  <option *ngFor="let level of months" [ngValue]="level.name">{{level.name}}</option>
                                 </select>
                               </div>
                             </div>
@@ -178,21 +175,16 @@
                             <div class="form-group row">
                               <label class="col-sm-2 col-form-label text-primary">Year: </label>
                               <div class="col-sm-10">
-                                <select name="Year" id="ddlYear" class="form-control">
-                                  <option value="2020">2020</option>
-                                  <option value="2021">2021</option>
-                                  <option value="2022">2022</option>
-                                </select>
+                                <select name="Year" id="ddlYear" class="form-control" [(ngModel)]="yearSelected" (ngModelChange)="toNumber()">
+                                  <option *ngFor="let level of years" [ngValue]="level.name">{{level.name}}</option>
+                                </select>                                
                               </div>
                             </div>
                             <div class="form-group row">
                               <label class="col-sm-2 col-form-label text-primary">Store: </label>
                               <div class="col-sm-10">
-                                <select id="ddlStore" name="Store" class="form-control">
-                                  <option value="S1">All</option>
-                                  <option value="S2">S2</option>
-                                  <option value="S3">S3</option>
-                                  <option value="S4">S4</option>
+                                <select id="ddlStore" name="Store" class="form-control" [(ngModel)]="storeSelected" (ngModelChange)="toNumber()">                                  
+                                  <option *ngFor="let level of stores" [ngValue]="level.name">{{level.name}}</option>
                                 </select>
                               </div>
                             </div>
@@ -220,15 +212,16 @@
               </li>
               <li>
                 <ul>
-                  <li><span class="h8 font-weight-bold">Month <i class="ti-angle-double-right small"></i> </span> <span class="h8 text-danger"> January</span></li>
-                  <li><span class="h8 font-weight-bold">Year <i class="ti-angle-double-right small"></i></span> <span class="h8 text-danger"> 2020</span></li>
-                  <li><span class="h8 font-weight-bold">Store <i class="ti-angle-double-right small"></i></span> <span class="h8 text-danger"> All</span></li>
+               
+                  <li><span class="h8 font-weight-bold">Month <i class="ti-angle-double-right small"></i> </span> <span class="h8 text-danger"> {{monthSelected}}</span></li>
+                  <li><span class="h8 font-weight-bold">Year <i class="ti-angle-double-right small"></i></span> <span class="h8 text-danger"> {{yearSelected}}</span></li>
+                  <li><span class="h8 font-weight-bold">Store <i class="ti-angle-double-right small"></i></span> <span class="h8 text-danger"> {{storeSelected}}</span></li>
                 </ul>
               </li>
             </ul>
 
 
-            <ul [@mobileMenuTop]="isCollapsedMobile" class="nav-right" [ngClass]="isCollapsedMobile">
+            <ul  class="nav-right d-none d-lg-block" >
               <li class="header-notification lng-dropdown">
                 <a href="javascript:;" id="dropdown-active-item">
                   <i class="flag-icon flag-icon-gb m-r-5"></i> English - UK
@@ -262,54 +255,6 @@
                   </li>
                 </ul>
               </li>
-              <!--<li class="header-notification">
-                <a href="javascript:;">
-                  <i class="ti-bell"></i>
-                  <span class="badge">5</span>
-                </a>
-                <ul class="show-notification">
-                  <li>
-                    <h6>Notifications</h6>
-                    <label class="label label-danger">New</label>
-                  </li>
-                  <li>
-                    <div class="media">
-                      <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
-                      <div class="media-body">
-                        <h5 class="notification-user">John Doe</h5>
-                        <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                        <span class="notification-time">30 minutes ago</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media">
-                      <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
-                      <div class="media-body">
-                        <h5 class="notification-user">Joseph William</h5>
-                        <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                        <span class="notification-time">30 minutes ago</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media">
-                      <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
-                      <div class="media-body">
-                        <h5 class="notification-user">Sara Soudein</h5>
-                        <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                        <span class="notification-time">30 minutes ago</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="header-notification">
-                <a href="javascript:;" (click)="toggleChat()" class="displayChatbox">
-                  <i class="ti-comments"></i>
-                  <span class="badge">9</span>
-                </a>
-              </li>-->
               <li class="user-profile header-notification">
                 <!--<a [routerLink]="['/']">-->
                 <a>

@@ -9,6 +9,7 @@ declare var $: any;
   ],
   encapsulation: ViewEncapsulation.None
 })
+
 export class DashboardComponent implements OnInit {
   comboChartData =  {
     chartType: 'ComboChart',
@@ -76,6 +77,11 @@ export class DashboardComponent implements OnInit {
     }
   };
   constructor() {}
+
+  toNumberConsole(){
+    //this.levelNum = +this.levelNum;
+    console.log("I am from dashboard");
+  }
 
   ngOnInit() {
     //setTimeout( () => {

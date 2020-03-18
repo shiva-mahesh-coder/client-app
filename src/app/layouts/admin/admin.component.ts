@@ -2,6 +2,9 @@ import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angu
 import {state, style, transition, animate, trigger, AUTO_STYLE} from '@angular/animations';
 import 'rxjs/add/operator/filter';
 import {MenuItems} from '../../shared/menu-items/menu-items';
+import * as $ from 'jquery';
+
+
 
 @Component({
   selector: 'app-admin',
@@ -71,7 +74,39 @@ export class AdminComponent implements OnInit {
     this.setMenuAttributs(this.windowWidth);
   }
 
-  ngOnInit() { }
+  //@ViewChild(DashboardComponent) private myChild: DashboardComponent;
+
+  ngOnInit() {  
+    
+    //this.dashboard.toNumberConsole();
+   }
+   
+  monthSelected:any;
+  yearSelected:any;
+  storeSelected:any;
+  months:Array<Object> = [
+      {num: 0, name: "January"},
+      {num: 1, name: "Feburary"},
+      {num: 2, name: "March"},
+      {num: 3, name: "April"}
+  ];
+  years:Array<Object> = [
+    {num: 0, name: "2017"},
+    {num: 1, name: "2018"},
+    {num: 2, name: "2019"},
+    {num: 3, name: "2020"}
+];
+stores:Array<Object> = [
+  {num: 0, name: "Sony"},
+  {num: 1, name: "Philips"},
+  {num: 2, name: "Zebronics"},
+  {num: 3, name: "Zabra"}
+];
+  
+  toNumber(){
+    //this.levelNum = +this.levelNum;
+    console.log(this.monthSelected);
+  }
 
 
 
@@ -152,8 +187,9 @@ export class AdminComponent implements OnInit {
       this.verticalNavType = this.verticalNavType === 'expanded' ? 'offcanvas' : 'expanded';
     }
   }
-  onMobileMenu() {
-    this.isCollapsedMobile = this.isCollapsedMobile === 'yes-block' ? 'no-block' : 'yes-block';
+  onMobileMenu() {    
+    //$('.nav-left').toggle("slide", { direction: "right" }, 1000);
+    $(".nav-left").toggle();
   }
 
   onScroll(event) {

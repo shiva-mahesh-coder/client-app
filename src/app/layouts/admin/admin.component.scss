@@ -27,3 +27,10 @@ aside.pcoded-slider.ng-sidebar {
   //font-weight:bolder;
  }
 }
+
+@media(max-width:992px){
+  .header-navbar .navbar-wrapper .navbar-container .mega-menu-top .show-notification{
+   width:100%;
+   margin:0;
+  }
+}
